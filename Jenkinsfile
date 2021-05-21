@@ -1,5 +1,6 @@
 pipeline {
   agent any
+  
   stages {
     stage('First') {
       steps {
@@ -21,8 +22,9 @@ pipeline {
       steps {
         sh '''
         echo 'Step Two'
-        '''
         echo "Updating second stage"
+        '''
+        
         script {
           echo ${EXECUTE}
         }
